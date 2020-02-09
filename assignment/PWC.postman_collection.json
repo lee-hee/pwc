@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "61b6f9c1-2c17-4983-99d5-a35f9b0fc990",
+		"name": "PWC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All friends ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/addressbook/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addressbook",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find unique contacts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"Mary\",\n        \"phoneNumbers\": [\"0466117555\"]\n    },\n    {\n        \"name\": \"John\",\n        \"phoneNumbers\": [\"0413417456\"]\n    },\n    {\n        \"name\": \"Jane\",\n        \"phoneNumbers\": [\"0410117403\"]\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addressbook/uniquecontacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addressbook",
+						"uniquecontacts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
